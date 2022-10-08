@@ -316,6 +316,11 @@ body {
   color: var(--clr-primary);
 }
 
+.navbar-brand {
+  min-height: 60px;
+  display: block;
+}
+
 .navbar .nav-link {
   position: relative;
   font-weight: 600;
