@@ -3,7 +3,11 @@ const fieldSets = document.querySelectorAll("fieldset");
 const selects = document.querySelectorAll("#fieldset1 select");
 let validateStatus = false;
 let currentField = 1;
-
+document.querySelectorAll("input").forEach((ele) => {
+  ele.onpaste = function (e) {
+    e.preventDefault();
+  };
+});
 // ================================== FieldSet1 =====================================
 // Select Validation
 selects.forEach((select) => {
@@ -421,11 +425,6 @@ fieldset6Input.forEach((ele) => {
 
 fieldset6Input.forEach((ele) => {
   ele.onkeydown = function (e) {
-    if (this.value.length >= 5) {
-      if (e.key != "Backspace") e.preventDefault();
-    }
-  };
-  ele.onpaste = function () {
     if (this.value.length >= 5) {
       if (e.key != "Backspace") e.preventDefault();
     }
