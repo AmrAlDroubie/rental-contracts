@@ -357,8 +357,8 @@ nextElement[4].addEventListener("click", function () {
   }
   for (let i = 0; i < arrayFieldset4Select.length; i++) {
     if (
-      arrayFieldset4Select[i].value ==
-      arrayFieldset4Select[i].firstElementChild.value
+      arrayFieldset5Select[i].value ==
+      arrayFieldset5Select[i].firstElementChild.value
     ) {
       v_5_4 = false;
       break;
