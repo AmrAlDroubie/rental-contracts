@@ -1,0 +1,67 @@
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-color: var(--clr-primary);
+  font-family: "tajawal";
+  border-width: 2px;
+}
+
+fieldset {
+  display: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+.active-fieldset {
+  display: block;
+}
+
+/* fieldset2 */
+.active-fieldset input {
+  border: 2px solid var(--clr-primary);
+}
+
+.active-fieldset input:focus {
+  outline: none;
+}
+
+input[type="number"] {
+  direction: rtl;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+fieldset {
+  background-color: #fafafa;
+  padding: 20px 15px !important;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 10px 10px #00000017;
+}
+
+fieldset select {
+  color: #818181;
+}
+
+fieldset input {
+  background-color: #fafafa;
+}
+
+body {
+  background-color: var(--clr-primary);
+}

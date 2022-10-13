@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form action="/" id="main-form" method="post" class="col-lg-4 col-md-6 col-12 c mx-auto my-5">
+        <!-- fieldSet1 -->
+        <fieldset class="active-fieldset" id="fieldset1">
+            <h2 class="text-center fw-bold fs-3 clr-primary">هل أنت المؤجر أو المستأجر ؟</h2>
+            <select name="" id="" class="d-block w-100 my-3 py-1 text-center rounded-2">
+                <option selected>إختر</option>
+                <option value='مؤجر'>
+                    مؤجر
+                </option>
+                <option value='مؤجر'>
+                    مستأجر
+                </option>
+            </select>
+            <select name="instrument-type" class="d-block w-100 my-3 py-2 text-center rounded-2">
+                <option selected>حدد نوع الصك</option>
+                <option value="صك إلكتروني">صك إلكتروني</option>
+                <option value="العقار من خلال البنك">العقار من خلال البنك</option>
+                <option value="صك ورقي قديم">صك ورقي قديم</option>
+                <option value="لايوجد صك">لايوجد صك</option>
+            </select>
+            <select class="d-block w-100 my-3 py-2 text-center rounded-2" name="waratha" id="waratha">
+                <option>هل مالك الصك متوفي؟</option>
+                <option value="true">نعم متوفي ونحن الورثة</option>
+                <option value="false">حي يرزق الله يطول في عمره</option>
+            </select>
+            <div class="text-center mt-3">
+                <div data-step-num="2"
+                    class="fieldset-next-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    التالي
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- fieldset2 -->
+        <fieldset class="text-center" id="fieldset2">
+            <h2 class="text-center fw-bold fs-3 clr-primary">معلومات المؤجر / المالك</h2>
+            <p class="light-text text-center fs-5">
+                لازم يكون المؤجر هو نفسه مالك الصك
+            </p>
+            <input type="number" class="vali-10 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="رقم هوية المؤجر">
+            <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
+            <input type="text" class="vali-name text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="اسم المؤجر الثلاثي">
+            <span class="d-none text-danger">من فضلك قم بادخال الاسم</span>
+            <input type="text" class="vali-iban text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="رقم حساب ايبان المؤجر لاستلام الايجار">
+            <span class="d-none text-danger">رقم الايبان خاطئ يجب أن يتكون من 24 خانة</span>
+            <input type="number" class="vali-10 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="رقم جوال المؤجر">
+            <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
+            <input type="text" class="vali-date1 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="تاريح ميلاد المؤجر">
+            <span class="d-none text-danger">من فضلك أختر التاريخ</span>
+            <div class="d-flex justify-content-center mt-3">
+                <div data-step-num="1"
+                    class="fieldset-prev-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    السابق
+                </div>
+                <div data-step-num="3"
+                    class="ms-2 fieldset-next-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    التالي
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- fieldset3 -->
+        <fieldset class="text-center" id="fieldset3">
+            <h2 class="text-center fw-bold fs-3 clr-primary">معلومات المستأجر</h2>
+            <input type="number" class="vali2-10 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="رقم هوية المستأجر">
+            <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
+            <input type="text" class="vali-name2 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="اسم المستأجر الثلاثي">
+            <span class="d-none text-danger">من فضلك قم بادخال الاسم</span>
+            <input type="number" class="vali2-10 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="رقم جوال المستأجر">
+            <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
+
+            <input type="text" class="vali-date2 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="تاريح ميلاد المستأجر">
+            <span class="d-none text-danger">من فضلك أختر التاريخ</span>
+            <div class="d-flex justify-content-center mt-3">
+                <div data-step-num="2"
+                    class="fieldset-prev-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    السابق
+                </div>
+                <div data-step-num="4"
+                    class="ms-2 fieldset-next-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    التالي
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- fieldset4 -->
+        <fieldset class="text-center " id="fieldset4">
+            <h2 class="text-center fw-bold fs-3 clr-primary">معلومات الصك</h2>
+            <p class="light-text lh-lg">
+                الله يسعدك في نهاااااية الطلب نحتاجك ترسل لنا صورة واضحة من الصك الورقي
+            </p>
+            <select name="real-estate-type" id="" class="d-block w-100 my-3 py-2 text-center rounded-2">
+                <option selected>حدد نوع العقار</option>
+                <option value="عمارة">عمارة</option>
+                <option value="فيلا">فيلا</option>
+            </select>
+            <span class="text-danger d-none">لو سمحت قم بالاختيار</span>
+            <select name="real-estate-using" id="" class="d-block w-100 my-3 py-2 text-center rounded-2">
+                <option value="">استخدام المبنى</option>
+                <option value="سكن عائلات">سكن عائلات</option>
+                <option value="سكن أفراد">سكن أفراد</option>
+                <option value="سكني - تجاري">سكني - تجاري</option>
+            </select>
+            <span class="text-danger d-none">لو سمحت قم بالاختيار</span>
+            <input type="number" name="floors-number" class="text-center d-block w-100 my-3 py-2
+            rounded-3" placeholder="عدد أدوار المبنى">
+            <span class="d-none text-danger">من فضلك قم باختيار عدد الادوار</span>
+            <div class="d-flex justify-content-center mt-3">
+                <div data-step-num="3"
+                    class="fieldset-prev-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    السابق
+                </div>
+                <div data-step-num="5"
+                    class="ms-2 fieldset-next-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    التالي
+                </div>
+            </div>
+        </fieldset>
+
+
+        <!-- fieldset5 -->
+        <fieldset class="text-center" id="fieldset5">
+            <h2 class="text-center fw-bold fs-3 clr-primary mb-2">
+                ادخل بيانات العقد الجديد
+            </h2>
+            <input type="number" class="text-center d-block w-100 my-2 py-2
+                rounded-3" placeholder="مبلغ الإيجار السنوي" id="paid">
+            <span class="d-none text-danger">يجب أن يكون أكثر من3000 ريال</span>
+            <div class="row">
+                <div class="col-12 col-lg-6 ">
+                    <select name="real-estate-type" id="" class="d-block w-100 my-2 py-2 text-center rounded-2">
+                        <option selected>طريقة الدفع ...</option>
+                        <option value="monthly">شهري</option>
+                        <option value="3-months">كل 3 أشهر</option>
+                        <option value="6-months">كل 6 أشهر</option>
+                        <option value="annualy">سنوي</option>
+                    </select>
+                    <span class="text-danger d-none">لو سمحت قم بالاختيار</span>
+                </div>
+                <div class="col-12 col-lg-6 ">
+                    <select name="real-estate-type" id="" class="d-block w-100 my-2 py-2 text-center rounded-2">
+                        <option selected>مدة العقد ...</option>
+                        <option value="1">سنة</option>
+                        <option value="2">سنتين</option>
+                        <option value="3">3 سنوات</option>
+                        <option value="4">4 سنوات</option>
+                        <option value="5">5 سنوات</option>
+                        <option value="6">6 سنوات</option>
+                        <option value="7">7 سنوات</option>
+                        <option value="8">8 سنوات</option>
+                        <option value="9">9 سنوات</option>
+                        <option value="10">10 سنوات</option>
+                    </select>
+                    <span class="text-danger d-none">لو سمحت قم بالاختيار</span>
+                </div>
+            </div>
+            <select name="real-estate-type" id="" class="d-block w-100 my-2 py-2 text-center rounded-2">
+                <option selected>حدد نوع الوحدة المراد تأجيرها</option>
+                <option value="شقة">شقَّة</option>
+                <option value="دور">دور</option>
+                <option value="فيلا">فيلا</option>
+                <option value="شقة صغيرة - ستوديو">شقَّة صغيرة (استوديو)</option>
+                <option value="شقة ملحق">شقَّة ملحق</option>
+                <option value="شقة وملحق علوي">شقة وملحق علوي</option>
+                <option value="دور وملحق علوي">دور وملحق علوي</option>
+                <option value="فيلا سطح - رووف">فيلَّا سطح - رووف</option>
+                <option value="غرفة سائق">غرفة سائق</option>
+                <option value="أخرى">أخرى</option>
+            </select>
+            <span class="text-danger d-none">لو سمحت قم بالاختيار</span>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <input type="text" class="fieldset5-vali-date text-center d-block w-100 my-2 py-2
+                    rounded-3" placeholder="تاريخ بداية العقد">
+                    <span class="d-none text-danger">أدخل التاريخ من فضلك</span>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <input type="number" class="fieldset5-number  text-center d-block w-100 my-2 py-2
+                    rounded-3" placeholder="الدور">
+                    <span class="d-none text-danger">من فضلك أدخل الدور</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <input type="number" class="text-center d-block w-100 my-2 py-2
+                    rounded-3" placeholder="رقم الوحدة" id="unit-number">
+                    <span class="d-none text-danger">من فضلك أدخل رقم الوحدة</span>
+
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <input type="number" class="fieldset5-number  text-center d-block w-100 my-2 py-2
+                rounded-3" placeholder="عدد الغرف">
+                    <span class="d-none text-danger">من فضلك أدخل عدد الغرف</span>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex justify-content-center mt-3">
+                <div data-step-num="4"
+                    class="fieldset-prev-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    السابق
+                </div>
+                <div data-step-num="6"
+                    class="ms-2 fieldset-next-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    التالي
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- fieldset6 -->
+        <fieldset class="text-center" id="fieldset6">
+            <h2 class="text-center fw-bold fs-3 clr-primary mb-3">
+                العنوان الوطني
+            </h2>
+
+
+            <select name="real-estate-type" id="" class="d-block w-100 my-2 py-2 text-center rounded-2">
+                <option value="">حدد المنطقة</option>
+                <option value="الرياض">الرياض</option>
+                <option value="مكة المكرمة">مكة المكرمة</option>
+                <option value="المدينة المنورة">المدينة المنورة</option>
+                <option value="القصيم">القصيم</option>
+                <option value="الشرقية">الشرقية</option>
+                <option value="عسير">عسير</option>
+                <option value="تبوك">تبوك</option>
+                <option value="حائل">حائل</option>
+                <option value="الحدود الشمالية">الحدود الشمالية</option>
+                <option value="جازان">جازان</option>
+                <option value="نجران">نجران</option>
+                <option value="الباحة">الباحة</option>
+                <option value="الجوف">الجوف</option>
+            </select>
+            <span class="d-none text-danger">من فضلك إختر المنطقة</span>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <input type="text" class="text-center d-block w-100 my-2 py-2
+                rounded-3" placeholder="المدينة" id="city">
+                    <span class="d-none text-danger">من فضلك أدخل المدينة</span>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <input type="number" class="fieldset6-number text-center d-block w-100 my-2 py-2
+                    rounded-3" placeholder="رقم المبنى">
+                    <span class="d-none text-danger">من فضلك أدخل رقم المبنى</span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <input type="text" class="fieldset6-number text-center d-block w-100 my-2 py-2
+                rounded-3" placeholder="الرمز البريدي" id="city">
+                    <span class="d-none text-danger">من فضلك أدخل الرمز البريدي</span>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <input type="number" class="fieldset6-number text-center d-block w-100 my-2 py-2
+                    rounded-3" placeholder="رقم الإضافي">
+                    <span class="d-none text-danger">من فضلك أدخل الرقم الإضافي</span>
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-center mt-3">
+                <div data-step-num="5"
+                    class="fieldset-prev-btn back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    السابق
+                </div>
+                <div data-step-num="7"
+                    class="ms-2 submit-form back-primary text-white text-center d-inline-block rounded-3 py-2 px-5 cursor-pointer">
+                    إرسال
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/cleave.min.js"></script>
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>

@@ -74,14 +74,6 @@ body {
   overflow-x: hidden;
 }
 
-#fake-logo {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--clr-primary);
-}
-
 :root {
   --clr-primary: #8f92f5;
   --clr-secondry: #c362df;
@@ -288,6 +280,10 @@ body {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
   z-index: 3333;
+}
+
+.scroll-top-btn i {
+  display: block;
 }
 
 /* ========================= Whatsapp Btn ========================= */
