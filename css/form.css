@@ -81,7 +81,9 @@ fieldset input {
 }
 
 body {
-  background-color: var(--clr-primary);
+  background-color: #333;
+  background-image: url("../images/contract_effect.svg");
+  background-repeat: repeat;
 }
 
 #form-steps ul {
@@ -103,16 +105,18 @@ body {
   margin-right: 10px;
   margin-left: 10px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
 #form-steps li:first-of-type {
   margin-right: 0;
+  align-items: flex-start;
 }
 
 #form-steps li:last-of-type {
   margin-left: 0;
+  align-items: flex-end;
 }
 
 #form-steps span {
@@ -136,6 +140,7 @@ body {
   -o-border-radius: 50%;
   background-color: #fff;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   justify-content: center;
   color: var(--clr-primary);

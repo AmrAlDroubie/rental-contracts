@@ -16,7 +16,7 @@
 <body>
 
 
-    <form action="/" id="main-form" method="post" class="col-xl-4 col-md-6 col-11">
+    <form action="data.php" id="main-form" method="post" class="col-xl-4 col-md-6 col-11">
         <!-- Steps -->
         <div id="form-steps">
             <ul class="d-flex justify-content-between text-center">
@@ -50,12 +50,12 @@
         <!-- fieldSet1 -->
         <fieldset class="active-fieldset" id="fieldset1">
             <h2 class="text-center fw-bold fs-4 clr-primary">هل أنت المؤجر أو المستأجر ؟</h2>
-            <select name="" id="" class="d-block w-100 my-3 py-1 text-center rounded-2">
+            <select name="user" class="d-block w-100 my-3 py-1 text-center rounded-2">
                 <option selected>إختر</option>
                 <option value='مؤجر'>
                     مؤجر
                 </option>
-                <option value='مؤجر'>
+                <option value='مستأجر'>
                     مستأجر
                 </option>
             </select>
@@ -65,7 +65,7 @@
                 <option value="العقار من خلال البنك">العقار من خلال البنك</option>
                 <option value="صك ورقي قديم">صك ورقي قديم</option>
             </select>
-            <select class="d-block w-100 my-3 py-2 text-center rounded-2" name="waratha" id="waratha">
+            <select class="d-block w-100 my-3 py-2 text-center rounded-2" name="waratha">
                 <option>هل مالك الصك متوفي؟</option>
                 <option value="true">نعم متوفي ونحن الورثة</option>
                 <option value="false">حي يرزق الله يطول في عمره</option>
@@ -84,19 +84,19 @@
             <p class="light-text text-center fs-5">
                 لازم يكون المؤجر هو نفسه مالك الصك
             </p>
-            <input type="number" class="vali-10 text-center d-block w-100 my-3 py-2
-                rounded-3" placeholder="رقم هوية المؤجر">
+            <input type="number" inputmode="numeric" class="vali-10 text-center d-block w-100 my-3 py-2
+                rounded-3" placeholder="رقم هوية المؤجر" name="rented-id">
             <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
-            <input type="text" class="vali-name text-center d-block w-100 my-3 py-2
+            <input name="rented-name" type="text" class="vali-name text-center d-block w-100 my-3 py-2
                 rounded-3" placeholder="اسم المؤجر الثلاثي">
             <span class="d-none text-danger">من فضلك قم بادخال الاسم</span>
-            <input type="text" class="vali-iban text-center d-block w-100 my-3 py-2
+            <input name="rented-iban" type="text" class="vali-iban text-center d-block w-100 my-3 py-2
                 rounded-3" placeholder="رقم حساب ايبان المؤجر لاستلام الايجار">
             <span class="d-none text-danger">رقم الايبان خاطئ يجب أن يتكون من 24 خانة</span>
-            <input type="number" class="vali-10 text-center d-block w-100 my-3 py-2
+            <input name="rented-mobile-number" inputmode="numeric" type="number" class="vali-10 text-center d-block w-100 my-3 py-2
                 rounded-3" placeholder="رقم جوال المؤجر">
             <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
-            <input type="text" class="vali-date1 text-center d-block w-100 my-3 py-2
+            <input name="rented-birthday" type="text" class="vali-date1 text-center d-block w-100 my-3 py-2
                 rounded-3" placeholder="تاريح ميلاد المؤجر">
             <span class="d-none text-danger">من فضلك أختر التاريخ</span>
             <div class="d-flex justify-content-center mt-3">
@@ -114,13 +114,13 @@
         <!-- fieldset3 -->
         <fieldset class="text-center" id="fieldset3">
             <h2 class="text-center fw-bold fs-3 clr-primary">معلومات المستأجر</h2>
-            <input type="number" class="vali2-10 text-center d-block w-100 my-3 py-2
+            <input type="number" inputmode="numeric" class="vali2-10 text-center d-block w-100 my-3 py-2
                 rounded-3" placeholder="رقم هوية المستأجر">
             <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
             <input type="text" class="vali-name2 text-center d-block w-100 my-3 py-2
                 rounded-3" placeholder="اسم المستأجر الثلاثي">
             <span class="d-none text-danger">من فضلك قم بادخال الاسم</span>
-            <input type="number" class="vali2-10 text-center d-block w-100 my-3 py-2
+            <input type="number" inputmode="numeric" class="vali2-10 text-center d-block w-100 my-3 py-2
                 rounded-3" placeholder="رقم جوال المستأجر">
             <span class="d-none text-danger">يجب أن يكون عدد الخانات يساوي 10</span>
 
@@ -158,7 +158,7 @@
                 <option value="سكني - تجاري">سكني - تجاري</option>
             </select>
             <span class="text-danger d-none">لو سمحت قم بالاختيار</span>
-            <input type="number" name="floors-number" class="text-center d-block w-100 my-3 py-2
+            <input type="number" inputmode="numeric" name="floors-number" class="text-center d-block w-100 my-3 py-2
             rounded-3" placeholder="عدد أدوار المبنى">
             <span class="d-none text-danger">من فضلك قم باختيار عدد الادوار</span>
             <div class="d-flex justify-content-center mt-3">
@@ -179,7 +179,7 @@
             <h2 class="text-center fw-bold fs-3 clr-primary mb-2">
                 ادخل بيانات العقد الجديد
             </h2>
-            <input type="number" class="text-center d-block w-100 my-2 py-2
+            <input type="number" inputmode="numeric" class="text-center d-block w-100 my-2 py-2
                 rounded-3" placeholder="مبلغ الإيجار السنوي" id="paid">
             <span class="d-none text-danger">يجب أن يكون أكثر من3000 ريال</span>
             <div class="row">
@@ -231,7 +231,7 @@
                     <span class="d-none text-danger">أدخل التاريخ من فضلك</span>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <input type="number" class="fieldset5-number  text-center d-block w-100 my-2 py-2
+                    <input type="number" inputmode="numeric" class="fieldset5-number  text-center d-block w-100 my-2 py-2
                     rounded-3" placeholder="الدور">
                     <span class="d-none text-danger">من فضلك أدخل الدور</span>
                 </div>
@@ -239,14 +239,14 @@
 
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <input type="number" class="text-center d-block w-100 my-2 py-2
+                    <input type="number" inputmode="numeric" class="text-center d-block w-100 my-2 py-2
                     rounded-3" placeholder="رقم الوحدة" id="unit-number">
                     <span class="d-none text-danger">من فضلك أدخل رقم الوحدة</span>
 
                 </div>
 
                 <div class="col-12 col-lg-6">
-                    <input type="number" class="fieldset5-number  text-center d-block w-100 my-2 py-2
+                    <input type="number" inputmode="numeric" class="fieldset5-number  text-center d-block w-100 my-2 py-2
                 rounded-3" placeholder="عدد الغرف">
                     <span class="d-none text-danger">من فضلك أدخل عدد الغرف</span>
                 </div>
@@ -297,7 +297,7 @@
                     <span class="d-none text-danger">من فضلك أدخل المدينة</span>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <input type="number" class="fieldset6-number text-center d-block w-100 my-2 py-2
+                    <input type="number" inputmode="numeric" class="fieldset6-number text-center d-block w-100 my-2 py-2
                     rounded-3" placeholder="رقم المبنى">
                     <span class="d-none text-danger">من فضلك أدخل رقم المبنى</span>
                 </div>
@@ -311,7 +311,7 @@
                     <span class="d-none text-danger">من فضلك أدخل الرمز البريدي</span>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <input type="number" class="fieldset6-number text-center d-block w-100 my-2 py-2
+                    <input type="number" inputmode="numeric" class="fieldset6-number text-center d-block w-100 my-2 py-2
                     rounded-3" placeholder="رقم الإضافي">
                     <span class="d-none text-danger">من فضلك أدخل الرقم الإضافي</span>
                 </div>
