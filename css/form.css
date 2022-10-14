@@ -8,10 +8,15 @@ select {
   -webkit-appearance: none;
   border: 0;
   font-family: "tajawal";
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-align-last: center;
 }
 
 select option {
   text-align: center;
+  text-align-last: center;
 }
 
 fieldset select:focus {
