@@ -100,8 +100,6 @@ body {
 }
 
 #form-steps li {
-  margin-right: 10px;
-  margin-left: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,6 +160,10 @@ body {
   #form-steps li.active span:last-of-type {
     width: 35px;
     height: 35px;
-    top: 28px;
+    top: 24px;
+  }
+
+  #form-steps li span:first-of-type {
+    font-size: 15px;
   }
 }
