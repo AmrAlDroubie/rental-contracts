@@ -14,10 +14,42 @@
 </head>
 
 <body>
-    <form action="/" id="main-form" method="post" class="col-lg-4 col-md-6 col-11  mx-auto my-5">
+
+
+    <form action="/" id="main-form" method="post" class="col-xl-4 col-md-6 col-11">
+        <!-- Steps -->
+        <div id="form-steps">
+            <ul class="d-flex justify-content-between text-center">
+                <li class="active" id='step1'>
+                    <span>بداية</span>
+                    <span>1</span>
+                </li>
+                <li id='step2'>
+                    <span>المؤجر</span>
+                    <span>2</span>
+                </li>
+                <li id='step3'>
+                    <span>المستأجر</span>
+                    <span>3</span>
+                </li>
+                <li id='step4'>
+                    <span>الصك</span>
+                    <span>4</span>
+                </li>
+                <li id='step5'>
+                    <span>العقد</span>
+                    <span>5</span>
+                </li>
+                <li id='step6'>
+                    <span>عنوان</span>
+                    <span>6</span>
+                </li>
+            </ul>
+        </div>
+
         <!-- fieldSet1 -->
         <fieldset class="active-fieldset" id="fieldset1">
-            <h2 class="text-center fw-bold fs-3 clr-primary">هل أنت المؤجر أو المستأجر ؟</h2>
+            <h2 class="text-center fw-bold fs-4 clr-primary">هل أنت المؤجر أو المستأجر ؟</h2>
             <select name="" id="" class="d-block w-100 my-3 py-1 text-center rounded-2">
                 <option selected>إختر</option>
                 <option value='مؤجر'>
@@ -32,7 +64,6 @@
                 <option value="صك إلكتروني">صك إلكتروني</option>
                 <option value="العقار من خلال البنك">العقار من خلال البنك</option>
                 <option value="صك ورقي قديم">صك ورقي قديم</option>
-                <option value="لايوجد صك">لايوجد صك</option>
             </select>
             <select class="d-block w-100 my-3 py-2 text-center rounded-2" name="waratha" id="waratha">
                 <option>هل مالك الصك متوفي؟</option>
@@ -303,7 +334,6 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
-    <script src="js/cleave.min.js"></script>
     <script src="js/form.js"></script>
 
 </body>

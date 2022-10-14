@@ -43,6 +43,16 @@ nextElement[0].addEventListener("click", function () {
     fieldSets.forEach((e) => {
       e.classList.remove("active-fieldset");
     });
+
+    // steps bar remove active
+    document.querySelectorAll("#form-steps li").forEach((ele) => {
+      ele.classList.remove("active");
+    });
+
+    // steps bar add active
+    document
+      .getElementById(`step${+this.getAttribute("data-step-num")}`)
+      .classList.add("active");
     document
       .getElementById(`fieldset${this.getAttribute("data-step-num")}`)
       .classList.add("active-fieldset");
@@ -123,6 +133,20 @@ nextElement[1].addEventListener("click", function () {
     document
       .getElementById(`fieldset${this.getAttribute("data-step-num")}`)
       .classList.add("active-fieldset");
+
+    document
+      .getElementById(`fieldset${this.getAttribute("data-step-num")}`)
+      .classList.add("active-fieldset");
+
+    // steps bar remove active
+    document.querySelectorAll("#form-steps li").forEach((ele) => {
+      ele.classList.remove("active");
+    });
+
+    // steps bar add active
+    document
+      .getElementById(`step${+this.getAttribute("data-step-num")}`)
+      .classList.add("active");
   } else {
     Swal.fire({
       icon: "error",
@@ -194,6 +218,15 @@ nextElement[2].addEventListener("click", function () {
     document
       .getElementById(`fieldset${this.getAttribute("data-step-num")}`)
       .classList.add("active-fieldset");
+    // steps bar remove active
+    document.querySelectorAll("#form-steps li").forEach((ele) => {
+      ele.classList.remove("active");
+    });
+
+    // steps bar add active
+    document
+      .getElementById(`step${+this.getAttribute("data-step-num")}`)
+      .classList.add("active");
   } else {
     Swal.fire({
       icon: "error",
@@ -259,6 +292,16 @@ nextElement[3].addEventListener("click", function () {
     document
       .getElementById(`fieldset${this.getAttribute("data-step-num")}`)
       .classList.add("active-fieldset");
+
+    // steps bar remove active
+    document.querySelectorAll("#form-steps li").forEach((ele) => {
+      ele.classList.remove("active");
+    });
+
+    // steps bar add active
+    document
+      .getElementById(`step${+this.getAttribute("data-step-num")}`)
+      .classList.add("active");
   } else {
     Swal.fire({
       icon: "error",
@@ -374,6 +417,15 @@ nextElement[4].addEventListener("click", function () {
     document
       .getElementById(`fieldset${this.getAttribute("data-step-num")}`)
       .classList.add("active-fieldset");
+    // steps bar remove active
+    document.querySelectorAll("#form-steps li").forEach((ele) => {
+      ele.classList.remove("active");
+    });
+
+    // steps bar add active
+    document
+      .getElementById(`step${+this.getAttribute("data-step-num")}`)
+      .classList.add("active");
   } else {
     Swal.fire({
       icon: "error",
@@ -459,6 +511,17 @@ preStep.forEach((pre) => {
     fieldSets.forEach((e) => {
       e.classList.remove("active-fieldset");
     });
+
+    // steps bar remove active
+    document.querySelectorAll("#form-steps li").forEach((ele) => {
+      ele.classList.remove("active");
+    });
+    // steps bar add active
+
+    document
+      .getElementById(`step${+this.getAttribute("data-step-num")}`)
+      .classList.add("active");
+
     document
       .getElementById(`fieldset${+this.getAttribute("data-step-num")}`)
       .classList.add("active-fieldset");

@@ -1,10 +1,21 @@
+#main-form {
+  margin: 60px auto;
+}
+
 select {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  border-color: var(--clr-primary);
+  border: 0;
   font-family: "tajawal";
-  border-width: 2px;
+}
+
+select option {
+  text-align: center;
+}
+
+fieldset select:focus {
+  border: 2px solid var(--clr-primary);
 }
 
 fieldset {
@@ -21,11 +32,12 @@ select:focus {
 
 /* fieldset2 */
 .active-fieldset input {
-  border: 2px solid var(--clr-primary);
+  border: 0;
 }
 
 .active-fieldset input:focus {
   outline: none;
+  border: 2px solid var(--clr-primary);
 }
 
 input[type="number"] {
@@ -44,14 +56,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 fieldset {
-  background-color: #fafafa;
+  background-color: #f1f1f1;
   padding: 20px 15px !important;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  box-shadow: 0 0 10px 10px #00000017;
+  box-shadow: 0 0 10px 10px #00000005;
 }
 
 fieldset select {
@@ -65,4 +77,83 @@ fieldset input {
 
 body {
   background-color: var(--clr-primary);
+}
+
+#form-steps ul {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#form-steps ul::before {
+  content: "";
+  width: 95%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 72%;
+  right: 8px;
+}
+
+#form-steps li {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#form-steps li:first-of-type {
+  margin-right: 0;
+}
+
+#form-steps li:last-of-type {
+  margin-left: 0;
+}
+
+#form-steps span {
+  display: block;
+  color: #fff;
+  position: relative;
+}
+
+#form-steps li span:first-of-type {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+#form-steps li span:last-of-type {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+}
+
+#form-steps li.active span:first-of-type {
+  display: none;
+}
+
+#form-steps li.active span:last-of-type {
+  width: 45px;
+  height: 45px;
+  background-color: #5156cf;
+  font-size: 25px;
+  color: #fff;
+  position: relative;
+  top: 22px;
+}
+
+@media (max-width: 576px) {
+  #form-steps li.active span:last-of-type {
+    width: 35px;
+    height: 35px;
+    top: 28px;
+  }
 }
