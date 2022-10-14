@@ -4,11 +4,6 @@ function form() {
   const selects = document.querySelectorAll("#fieldset1 select");
   let validateStatus = false;
   let currentField = 1;
-  document.querySelectorAll("input").forEach((ele) => {
-    ele.onpaste = function (e) {
-      e.preventDefault();
-    };
-  });
   // ================================== FieldSet1 =====================================
   // Select Validation
   selects.forEach((select) => {
