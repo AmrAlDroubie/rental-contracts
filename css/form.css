@@ -54,11 +54,11 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
-input[type="date"]::-webkit-inner-spin-button,
+/* input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
-}
+} */
 
 fieldset {
   background-color: #f1f1f1;
@@ -81,7 +81,9 @@ fieldset input {
 }
 
 body {
-  background-color: #333;
+  background-color: #222;
+  background-image: url("../images/1.svg");
+  background-size: cover;
 }
 
 #form-steps ul {

@@ -90,6 +90,10 @@ function form() {
     this.type = "date";
     this.showPicker();
   };
+  document.querySelector(".vali-date1").onkeydown = function () {
+    this.type = "date";
+    this.showPicker();
+  };
   document.querySelector(".vali-date1").onblur = function () {
     if (this.value == "") {
       this.nextElementSibling.classList.remove("d-none");
@@ -172,6 +176,10 @@ function form() {
 
   // Check date
   document.querySelector(".vali-date2").onclick = function () {
+    this.type = "date";
+    this.showPicker();
+  };
+  document.querySelector(".vali-date2").onkeydown = function () {
     this.type = "date";
     this.showPicker();
   };
